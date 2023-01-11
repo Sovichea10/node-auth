@@ -15,6 +15,10 @@ router.get('/', async (req, res) => {
     `).end()
 })
 
+router.get('/hello', async (req, res) => {
+    res.send('Kon Papa');
+})
+
 router.get('/server-update', async (req, res) => {
     console.log('Executing server update...')
     await exec('git pull')
